@@ -10,6 +10,9 @@ function addTask() {
     let span = document.createElement("span");
     span.innerHTML = "\u00d7";
     li.appendChild(span);
+    //   let text = document.createElement("input"); // Create an input element for editing
+    //   text.type = "text";
+    //   text.value = inputBox.value;
   }
   inputBox.value = "";
   saveData();
@@ -28,6 +31,7 @@ listContainer.addEventListener(
   },
   false
 );
+
 function saveData() {
   localStorage.setItem("data", listContainer.innerHTML);
 }
